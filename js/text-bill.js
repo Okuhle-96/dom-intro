@@ -33,10 +33,10 @@ function textBillWidget() {
     totalOneElement.innerHTML = allBills;
     
     if (allBills >= 30 && allBills < 50) {
-        document.querySelector(".red").classList.add("warning"); 
-    } else if (allBills >= 50) {
-        document.querySelector(".orange").classList.remove("warning");
-        document.querySelector(".red").classList.add("danger");
-    }
+        document.querySelector(".totalText").classList.add("warning");
+        }else if (allBills >= 50) {
+            document.querySelector(".totalText").classList.remove("warning");
+            document.querySelector(".totalText").classList.add("danger");
+        }
 }
 addToBillBtnElement.addEventListener('click', textBillWidget);

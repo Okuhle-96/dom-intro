@@ -32,9 +32,10 @@ function radioBillWidget() {
     totalTwoElement.innerHTML = entireRadioBill;
     
     if (entireRadioBill >= 30 && entireRadioBill < 50) {
-        document.querySelector(".orange").classList.add("warning");
-    } else if (entireRadioBill >= 50) {
-        document.querySelector(".red").classList.add("danger");
-    }
+        document.querySelector(".totalRadio").classList.add("warning");
+        }else if (entireRadioBill >= 30) {
+            document.querySelector(".totalRadio").classList.remove("warning");
+            document.querySelector(".totalRadio").classList.add("danger");
+        }
 }
 radioBillAddBtnElement.addEventListener('click', radioBillWidget);

@@ -25,5 +25,13 @@ for(var i = 0; i < phoneBill.length; i++) {
     var entireBill = totalBill.toFixed(2);
     billTotalElement.innerHTML = entireBill;
 //link the function to a click event on the calculate button
+
+if (entireBill >= 20 && entireBill < 30) {
+    document.querySelector(".total").classList.add("warning");
+    }else if (entireBill >= 30) {
+        document.querySelector(".total").classList.remove("warning");
+        document.querySelector(".total").classList.add("danger");
+    }
 }
 calculateBtnElement.addEventListener('click', totalPhoneBill);
+
