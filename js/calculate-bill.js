@@ -31,8 +31,11 @@ if (entireBill >= 20 && entireBill < 30) {
     }else if (entireBill >= 30) {
         document.querySelector(".total").classList.remove("warning");
         document.querySelector(".total").classList.add("danger");
-    }if(entireBill > 20){
+    }if(entireBill < 20){
 	  document.querySelector(".total").classList.remove("warning");
+        document.querySelector(".total").classList.remove("danger");    
+    }else if(entireBill < 30){
+	  document.querySelector(".total").classList.add("warning");
         document.querySelector(".total").classList.remove("danger");    
     }
 }
